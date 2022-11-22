@@ -123,6 +123,15 @@ class SILengthReciprocalDimension(_Dimension):
                 latexrepr = _LATEX_MU + "m$^{-1}$"
             self.add_units("1/{0}m".format(prefix), 1 / factor, latexrepr)
 
+class AngstromLengthDimension(_Dimension):
+    def __init__(self):
+        super().__init__("Å")
+
+
+class AngstromLengthReciprocalDimension(_Dimension):
+    def __init__(self):
+        super().__init__("1/Å", "Å$^{-1}$")
+
 
 class ImperialLengthDimension(_Dimension):
     def __init__(self):

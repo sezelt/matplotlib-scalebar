@@ -64,7 +64,9 @@ from matplotlib.patches import Rectangle
 from matplotlib_scalebar.dimension import (
     _Dimension,
     SILengthDimension,
+    AngstromLengthDimension,
     SILengthReciprocalDimension,
+    AngstromLengthReciprocalDimension,
     ImperialLengthDimension,
     PixelLengthDimension,
     AngleDimension,
@@ -124,14 +126,18 @@ matplotlib.rcParams.validate = dict(
 
 # Dimension lookup
 SI_LENGTH = "si-length"
+ANGSTROM_LENGTH = "angstrom"
 SI_LENGTH_RECIPROCAL = "si-length-reciprocal"
+ANGSTROM_LENGTH_RECIPROCAL = "angstrom-reciprocal"
 IMPERIAL_LENGTH = "imperial-length"
 PIXEL_LENGTH = "pixel-length"
 ANGLE = "angle"
 
 _DIMENSION_LOOKUP = {
     SI_LENGTH: SILengthDimension,
+    ANGSTROM_LENGTH: AngstromLengthDimension,
     SI_LENGTH_RECIPROCAL: SILengthReciprocalDimension,
+    ANGSTROM_LENGTH_RECIPROCAL: AngstromLengthReciprocalDimension,
     IMPERIAL_LENGTH: ImperialLengthDimension,
     PIXEL_LENGTH: PixelLengthDimension,
     ANGLE: AngleDimension,
